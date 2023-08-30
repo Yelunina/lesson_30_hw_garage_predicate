@@ -36,19 +36,19 @@ public class GarageImpl implements Garage {
 
     @Override
     public Car[] findCarByRegNumber(String regNumber) {
-        Predicate<Car> predicate = с -> с.getRegNumber() = regNumber;
+        Predicate<Car> predicate = с -> regNumber.equals(с.getRegNumber());
         return findCarsByPredicate(predicate);
     }
 
     @Override
     public Car[] findCarsByModel(String model) {
-        Predicate<Car> predicate = с -> с.getModel() = model;
+        Predicate<Car> predicate = с -> model.equals(с.getModel());
         return findCarsByPredicate(predicate);
     }
 
     @Override
     public Car[] findCarsByCompany(String company) {
-        Predicate<Car> predicate = c -> c.getCompany() = company;
+        Predicate<Car> predicate = c -> company.equals(c.getCompany());
         return findCarsByPredicate(predicate);
     }
 
@@ -65,7 +65,7 @@ public class GarageImpl implements Garage {
 
     @Override
     public Car[] findCarsByColor(String color) {
-        Predicate<Car> predicate = c -> c.getColor() = color;
+        Predicate<Car> predicate = c -> color.equals(c.getColor());
         return findCarsByPredicate(predicate);
     }
 
