@@ -7,7 +7,7 @@ public interface Garage {
 
     Car removeCar(String regNumber);
 
-    Car findCarByRegNumber(String regNumber);
+    Car[] findCarByRegNumber(String regNumber);
 
     Car[] findCarsByModel(String model);
 
